@@ -1,6 +1,5 @@
 package firstapp.review.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import firstapp.company.model.Company;
 import jakarta.persistence.Entity;
@@ -19,7 +18,7 @@ public class Review {
 	private String description;
 	private double rating;
 	
-	@JsonIgnore
+	
 	@ManyToOne
 	private Company company;
 	

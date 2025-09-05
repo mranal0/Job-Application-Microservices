@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import firstapp.job.model.Job;
-import firstapp.job.repository.JobRepo;
+import firstapp.job.repository.JobRepository;
 import jakarta.transaction.Transactional;
 
 
@@ -13,27 +13,27 @@ import jakarta.transaction.Transactional;
 @Service
 public class JobService {
 
-    private final JobRepo jobRepo;
+    private final JobRepository JobRepository;
 
-    public JobService(JobRepo jobRepo) {
-        this.jobRepo = jobRepo;
+    public JobService(JobRepository JobRepository) {
+        this.JobRepository = JobRepository;
     }
 
     public List<Job> findAll() {
-        return jobRepo.findAll();
+        return JobRepository.findAll();
     }
 
     public Job addJob(Job job) {
-        return jobRepo.save(job);
+        return JobRepository.save(job);
     }
 
     public Job getById(Long id) {
-        return jobRepo.findById(id).orElse(null);
+        return JobRepository.findById(id).orElse(null);
     }
 
     public boolean deleteJobById(Long id) {
-        if (jobRepo.existsById(id)) {
-            jobRepo.deleteById(id);
+        if (JobRepository.existsById(id)) {
+            JobRepository.deleteById(id);
             return true;
         }
         return false;
@@ -41,7 +41,7 @@ public class JobService {
 
     @Transactional
     public Job updateJobById(Long id, Job updatedJob) {
-        return jobRepo.findById(id).map(job -> {
+        return JobRepository.findById(id).map(job -> {
             job.setTitle(updatedJob.getTitle());
             job.setDescription(updatedJob.getDescription());
             job.setMinSalary(updatedJob.getMinSalary());

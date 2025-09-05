@@ -6,7 +6,7 @@ import firstapp.job.model.Job;
 
 
 
-public interface JobRepo extends JpaRepository<Job, Long> {
+public interface JobRepository extends JpaRepository<Job, Long> {
 
 //	When your application starts:
 	

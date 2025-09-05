@@ -39,27 +39,42 @@ public class ReviewService {
 	}
 
 	public Review getById(Long companyId, Long reviewsId) {
+		List<Review> reviews = reviewRepository.findByCompanyId(companyId);
 		
-		
+		return reviews.stream()
+		.filter(review -> review.getId().equals(reviewsId))
+		.findFirst()
+		.orElse(null);
 	}
-		
-	
-	
-	
-	
-	
-	
-	
-	
+	public boolean updateReview(Long companyId, Long reviewId, Review updatedReview)
+	{
+		if (companyService.getById(companyId) != null)
+		{ 	
+			updatedReview.setCompany(companyService.getById(companyId)); 
+			updatedReview.setId(reviewId);
+			reviewRepository.save(updatedReview);
+			return true;
+		} else 
+		{
+			return false;
+		}
+	}
 
-//	public boolean deletelById(Long id) {
-//		// TODO Auto-generated method stub
-//		return false;
-//	}
-//
-//	public boolean changeById(Long id, Review updatedReview) {
-//		// TODO Auto-generated method stub
-//		return false;
-//	}
-
+	public boolean deleteReview(Long companyId, Long reviewId) 
+	{
+		if(companyService.getById(companyId) != null && reviewRepository.existsById(reviewId))
+		{
+			Review review = reviewRepository.findById(reviewId).orElse(null);
+			Company company = review.getCompany();
+			company.getReviews().remove(review);
+			review.setCompany (null);
+			companyService.changeById(companyId, company);
+			reviewRepository.deleteById(reviewId);
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
 }
