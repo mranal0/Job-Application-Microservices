@@ -1,4 +1,4 @@
-# Job Application System – From Monolith to Microservices 🚀  
+# Job Portal – From Monolith to Microservices 🚀 
 
 This repository documents my **learning journey with Spring Boot**, where I’m building a job application system step by step.  
 
@@ -73,10 +73,3 @@ I’m using it to:
 - Practice **databases (MySQL, MongoDB)** with Spring Boot.  
 - Gain real-world exposure to **Docker, Kubernetes, and distributed systems concepts**.  
 - Build towards a **production-ready, full-stack system** (Spring Boot backend + React frontend).  
-
----
-
-## 🔗 Learning Source  
-
-This project is inspired by a **hands-on video series on Spring Boot & Microservices**, which demonstrates how to go from a monolith to a distributed, enterprise-style system.  
-
