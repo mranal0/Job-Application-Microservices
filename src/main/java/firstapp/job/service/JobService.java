@@ -13,27 +13,27 @@ import jakarta.transaction.Transactional;
 @Service
 public class JobService {
 
-    private final JobRepository JobRepository;
+    private final JobRepository jobRepository;
 
-    public JobService(JobRepository JobRepository) {
-        this.JobRepository = JobRepository;
+    public JobService(JobRepository jobRepository) {
+        this.jobRepository = jobRepository;
     }
 
     public List<Job> findAll() {
-        return JobRepository.findAll();
+        return jobRepository.findAll();
     }
 
     public Job addJob(Job job) {
-        return JobRepository.save(job);
+        return jobRepository.save(job);
     }
 
     public Job getById(Long id) {
-        return JobRepository.findById(id).orElse(null);
+        return jobRepository.findById(id).orElse(null);
     }
 
     public boolean deleteJobById(Long id) {
-        if (JobRepository.existsById(id)) {
-            JobRepository.deleteById(id);
+        if (jobRepository.existsById(id)) {
+            jobRepository.deleteById(id);
             return true;
         }
         return false;
@@ -41,7 +41,7 @@ public class JobService {
 
     @Transactional
     public Job updateJobById(Long id, Job updatedJob) {
-        return JobRepository.findById(id).map(job -> {
+        return jobRepository.findById(id).map(job -> {
             job.setTitle(updatedJob.getTitle());
             job.setDescription(updatedJob.getDescription());
             job.setMinSalary(updatedJob.getMinSalary());

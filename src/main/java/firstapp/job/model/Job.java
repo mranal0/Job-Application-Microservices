@@ -1,6 +1,8 @@
 package firstapp.job.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import firstapp.company.model.Company;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,6 +25,7 @@ public class Job
 	private String location;
 	
 	@ManyToOne
+	@JsonIgnore
 	private Company company;
 	
 	 // Constructors
