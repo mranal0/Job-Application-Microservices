@@ -73,4 +73,4 @@ A hands-on showcase of building a scalable backend system—from a CRUD monolith
 
 ---
 
-> _This README evolves as the project grows. Detailed API docs, architecture diagrams, and design notes will appear under `docs/`._  
+> _This README evolves as the project grows. every stage is saved in the form of release   
