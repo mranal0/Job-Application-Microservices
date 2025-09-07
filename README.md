@@ -1,75 +1,76 @@
-# Job Portal – From Monolith to Microservices 🚀 
+[![Java 17](https://img.shields.io/badge/Java-17-blue)](https://www.oracle.com/java/) [![Spring Boot 3.x](https://img.shields.io/badge/Spring%20Boot-3.x-green)](https://spring.io/projects/spring-boot)
 
-This repository documents my **learning journey with Spring Boot**, where I’m building a job application system step by step.  
+# 🚀 Job Portal: Monolith → Microservices
 
-The project starts as a **monolithic Spring Boot application** and will gradually evolve into a **modern microservices-based system**.  
-I’m using this project as a playground to understand **backend architecture, databases, and distributed systems** in practice.  
-
----
-
-## 📌 Current Stage – Monolithic Application  
-
-Right now, the project is a **Spring Boot monolith**.  
-
-### 🏗️ What does “monolith” mean?  
-A **monolithic application** is a single, unified codebase where all the components of the system — Jobs, Companies, and Reviews — live together, run on the same server, and share the same database.  
-
-It’s simple to build and run but comes with limitations when scaling or adding new features, which is why I’ll later migrate it into microservices.  
-
-### ✅ Features Implemented (so far)  
-- RESTful **HTTP endpoints** for:  
-  - Creating, reading, updating, and deleting **Jobs**  
-  - Managing **Companies**  
-  - Submitting and viewing **Reviews**  
-- A **MySQL database** for persistence (with future flexibility to use **MongoDB** for certain services if needed).  
-- Organized into a standard **Spring Boot layered structure**: controllers → services → repositories.  
-- A single **Spring Boot server** hosting the entire system.  
-
-### 📂 Tech Stack  
-- **Spring Boot** (backend framework)  
-- **Spring Data JPA** (data persistence)  
-- **MySQL** (primary database)  
-- **MongoDB** (optional, for future learning/experiments)  
+A hands-on showcase of building a scalable backend system—from a CRUD monolith to a full microservices ecosystem—using Spring Boot and cloud-native patterns.
 
 ---
 
-## 🎯 Next Step – Breaking the Monolith  
-
-The next milestone is to refactor this into a **microservices architecture**, where each major module becomes its own independent service:  
-
-- **Job Service** – manage job listings  
-- **Company Service** – handle company data  
-- **Review Service** – manage feedback and reviews  
-
-Planned changes and learning goals:  
-- Enable **inter-service communication** (first via REST, then exploring Feign Clients, WebClient, Kafka, RabbitMQ).  
-- Add **Service Discovery** with Eureka.  
-- Route all client requests through an **API Gateway**.  
-- **Containerize** each service with Docker.  
-- Explore orchestration with **Kubernetes** in later stages.  
-- Improve **resilience, monitoring, and configuration management** as the system grows.  
+## 🌟 Why This Project?
+- **Personal Growth:** Gain end-to-end experience designing, refactoring, and optimizing a real-world Spring Boot application.  
+- **Skill Showcase:** Demonstrate API design, data modeling, microservice decomposition, resilience patterns, and containerization.  
+- **Industry Alignment:** Work with Spring Data JPA/MySQL, Eureka, Cloud Gateway, Resilience4J, Docker/Kubernetes—technologies widely adopted in the enterprise.
 
 ---
 
-## 🛠️ Roadmap (YDIS – Your Development in Steps)  
-
-- [x] Build monolith with Jobs, Companies, Reviews  
-- [ ] Convert monolith into microservices  
-- [ ] Add API Gateway & Service Registry (Eureka + Spring Cloud Gateway)  
-- [ ] Implement async messaging (Kafka / RabbitMQ)  
-- [ ] Secure services with OAuth2/Keycloak  
-- [ ] Containerize with Docker & deploy to Kubernetes  
-- [ ] Add monitoring, tracing, and fault tolerance (Actuator, Zipkin, Micrometer, Resilience4J)  
-- [ ] Integrate AI APIs for advanced features  
+## ✨ Key Highlights
+- Clean **layered architecture**: controllers → services → repositories  
+- Domain-based **module separation** for easy microservice split  
+- Centralized **error handling** & meaningful HTTP responses  
+- Built-in **metrics** and **health checks** via Spring Actuator  
+- Ready for **polyglot persistence** (MySQL, H2 dev profile, optional MongoDB)  
+- Future-ready for **async messaging** with Kafka/RabbitMQ
 
 ---
 
-## 🚀 Why This Project Exists  
+## 🔍 Snapshot
+| Phase           | Status         | Focus                                      |
+|-----------------|----------------|--------------------------------------------|
+| Monolith        | ✅ Completed    | CRUD APIs & persistence (Jobs, Companies, Reviews) |
+| Microservices   | 🔄 In Progress  | Service decomposition & REST integration   |
+| Resilience      | ⏳ Upcoming     | Circuit breakers, retries, metrics         |
+| Deployment      | ⏳ Upcoming     | Docker & Docker-Compose, Kubernetes        |
 
-This is a **learning-first project**.  
-I’m using it to:  
-- Understand the **difference between monoliths and microservices**.  
-- Learn how to design, build, and connect backend services.  
-- Practice **databases (MySQL, MongoDB)** with Spring Boot.  
-- Gain real-world exposure to **Docker, Kubernetes, and distributed systems concepts**.  
-- Build towards a **production-ready, full-stack system** (Spring Boot backend + React frontend).  
+---
+
+## 🛠️ Tech Stack & Tools
+- **Backend:** Java 17, Spring Boot 3.x  
+- **Database:** Spring Data JPA, MySQL (H2 for local dev; MongoDB experiments)  
+- **Cloud-Native:** Eureka (service discovery), Spring Cloud Gateway  
+- **Resilience:** Resilience4J (timeouts, retries, circuit breakers)  
+- **Observability:** Spring Actuator, Micrometer, Prometheus/Grafana  
+- **Containers:** Docker, Docker Compose, Kubernetes (future)  
+- **Messaging (future):** Apache Kafka, RabbitMQ  
+
+---
+
+## 🗺️ Roadmap — Tick as I Progress
+### 🏗️ Monolith  
+- [x] Scaffold controllers, services, repositories  
+- [x] CRUD endpoints for Jobs, Companies, Reviews  
+- [x] Data persistence with Spring Data JPA + MySQL  
+
+### 🔄 Microservices Transition  
+- [ ] Split into **job-service**, **company-service**, **review-service**  
+- [ ] RESTful inter-service communication (WebClient / Feign)  
+- [ ] Service Discovery via **Eureka**  
+- [ ] Central API Gateway (Spring Cloud Gateway)  
+
+### ⚙️ Resilience & Observability  
+- [ ] Timeouts, retries, circuit breakers (Resilience4J)  
+- [ ] Monitoring & dashboards (Actuator, Micrometer, Prometheus)  
+
+### 🐳 Containerization & Deployment  
+- [ ] Dockerize each service & gateway  
+- [ ] Define multi-service orchestration with Docker Compose  
+- [ ] Explore Kubernetes manifests & Helm charts  
+
+---
+
+## 📫 Connect with Me
+- GitHub: [mranal0](https://github.com/mranal0)  
+- LinkedIn: [mranal0](https://www.linkedin.com/in/mranal0)  
+
+---
+
+> _This README evolves as the project grows. Detailed API docs, architecture diagrams, and design notes will appear under `docs/`._  
