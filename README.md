@@ -1,4 +1,8 @@
-[![Java 17](https://img.shields.io/badge/Java-17-blue)](https://www.oracle.com/java/) [![Spring Boot 3.x](https://img.shields.io/badge/Spring%20Boot-3.x-green)](https://spring.io/projects/spring-boot)
+[![Java 17](https://img.shields.io/badge/Java-17-blue)](https://www.oracle.com/java/)
+[![Spring Boot 3.x](https://img.shields.io/badge/Spring%20Boot-3.x-green)](https://spring.io/projects/spring-boot)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)](https://www.mysql.com/)
+[![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5.svg?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
 
 # 🚀 Job Portal: Monolith → Microservices
 
