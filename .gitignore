@@ -54,3 +54,8 @@ pids
 ### Application specific ###
 application-local.properties
 application-dev.properties
+
+### Microservices application.properties ###
+Jobms/src/main/resources/application.properties
+Companyms/src/main/resources/application.properties
+Reviewms/src/main/resources/application.properties
